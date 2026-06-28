@@ -11,9 +11,6 @@ The goal of this project is to create a Direct Digital Synthesizer (DDS) that fu
 ### FPGA Platform:  
 [Radiona ULX3S](https://radiona.org/ulx3s/) (Lattice ECP5 LFE5U-85F)
 
-### SDR Platform:
-[HackRF Pro](https://greatscottgadgets.com/hackrf/pro/)
-
 ## Decoding Specifications:  
 Assuming a standard US 915 MHz LoRa signal, the ULX3S 25MHz clock, and a sweep durations of 1ms:
 
@@ -39,4 +36,7 @@ This project was developed in an Arch Linux environment using open-source hardwa
 * nextpnr-ecp5  
 * fujprog
 
-## Quick Start: 
+## Quick Start:
+
+## Reference:  
+[Direct Digital Synthesizer](https://wirelesspi.com/direct-digital-synthesizer-dds/)
