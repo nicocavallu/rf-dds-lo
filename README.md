@@ -3,7 +3,8 @@
 ## Overview
 The goal of this project is to create a Direct Digital Synthesizer (DDS) that functions as a Local Oscillator (LO) for RF and DSP applications. The DDS-LO is a fundamental part of most DSP systems and this project is the is the first step of my overarching project inolving analyzing LoRa data from the Notre Dame IrishSAT IRIS project using the ULX3S fpga. The DDS-LO is essential to part of the de-chirping operation when decoding LoRA messages.
 
-## ![System](dds_lo.jpg)
+## System
+![System](dds_lo.png)
 
 ## Hardware Requirements 
 
