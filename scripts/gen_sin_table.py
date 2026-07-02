@@ -22,6 +22,6 @@ with open("sine_table.mem", "w") as f:
         else:
             val = raw_val
 
-    f.write(f"{val:05X}\n")
+        f.write(f"{val:05X}\n")
 
 print("Succesfully generated sine_table.mem with 1024 18-bit values")

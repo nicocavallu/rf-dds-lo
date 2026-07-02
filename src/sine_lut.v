@@ -17,8 +17,6 @@ module sine_lut(
     always @(posedge clk) begin
         if (enable) begin
             sine_out <= rom[phase_truncated];
-        end else begin
-            sine_out <= sine_out;
         end
     end
 endmodule
