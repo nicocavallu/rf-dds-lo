@@ -6,9 +6,9 @@
 module sine_lut(
     input clk, enable,
     input [9:0] phase_truncated,
-    output reg [17:0] sine_out);
+    output reg signed [17:0] sine_out);
 
-    reg [17:0] rom [1024];
+    reg signed [17:0] rom [1024];
 
     initial begin
         $readmemh("../scripts/sine_table.mem", rom);

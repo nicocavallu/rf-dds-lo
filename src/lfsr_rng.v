@@ -10,7 +10,7 @@ module lfsr_rng(
     output reg [11:0] q);
 
     wire feedback = q[0];
-    wire [11:0] mask = 12'hC08; // bit mask with taps at positions 11, 10, and 4
+    wire [11:0] mask = 12'hE08; // bit mask with taps at positions 11, 10, and 4
     always @(posedge clk or negedge arst_n) begin
         if (!arst_n) begin
             q <=12'hACE; // non-zero seed

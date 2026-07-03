@@ -10,8 +10,7 @@ module truncate(
     input [11:0] q,
     output [9:0] phase_truncated);
 
-    wire [12:0] noise;
+    wire [31:0] dithered_phase = phase_out + {q, 10'b0};
 
-    assign noise = {1'b0,phase_out[21:10]} + {1'b0,q};
-    assign phase_truncated = phase_out[31:22] + noise[12];
+    assign phase_truncated = dithered_phase[31:22];
 endmodule

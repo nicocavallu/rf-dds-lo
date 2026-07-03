@@ -2,7 +2,7 @@
 * This module it to adapt the basic FCW of a DDS LO to the LoRa css
 * Normally the FCW is a specific constant for a specific phase
 * However, since the LoRa spectrum changes the FCW need to change to match
-* Since the ULX3S clock is only 25MHz the nyquist limit is 112.5MHz
+* Since the ULX3S clock is only 25MHz the nyquist limit is 12.5MHz
 */
 
 module fcw_accumulator(
@@ -30,14 +30,14 @@ module fcw_accumulator(
     always @(posedge clk or negedge arst_n) begin
         if (~arst_n) begin
             state <= RESET;
-            fcw_count <= fcw_freq - fcw_b/2;
+            fcw_count <= fcw_freq + fcw_b/2;
         end else begin
             state <= next_state;
 
             if (next_state == RESET) begin
-                fcw_count <= fcw_freq - fcw_b/2;
+                fcw_count <= fcw_freq + fcw_b/2;
             end else begin
-                fcw_count <= fcw_count + inc;
+                fcw_count <= fcw_count - inc;
             end
         end
     end

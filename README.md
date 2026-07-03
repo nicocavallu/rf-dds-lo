@@ -35,8 +35,25 @@ This project was developed in an Arch Linux environment using open-source hardwa
 * yosys 
 * nextpnr-ecp5  
 * fujprog
+* python3
+* numpy
 
 ## Quick Start:
+
+An automated shell script 'run_sim.sh' is provided in the root directory to execute the entire simulation pipeline from scratch. To run the full system simulation, make the script executable and execute it;
+
+```bash
+chmod +x run_sim.sh
+./run_sim.sh
+```
+
+The script automatically executes the following pipeline stage:  
+
+1. Invokes (scripts/gen_sin_table.py)[scripts/gen_sin_table.py] to calculate and format the 18-bit signed sine wave values into a (sine_table.mem)[sine_table.mem].
+2. Compiles the top-level test bench along with all RTL source files using Icarus Verilog and runs the compiled binary via vvp. 
+3. Launches GTKWave to view generated signal.
+
+This repository includes a .lpf file for hardware integration of the ULX3S FPGA board.
 
 ## Reference:  
 [Direct Digital Synthesizer](https://wirelesspi.com/direct-digital-synthesizer-dds/)
