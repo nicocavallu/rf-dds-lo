@@ -14,15 +14,15 @@ The goal of this project is to create a Direct Digital Synthesizer (DDS) that fu
 ## Decoding Specifications:  
 Assuming a standard US 915 MHz LoRa signal, the ULX3S 25MHz clock, and a sweep durations of 1ms:
 
-Signal Bandwith: 125 kHz
+* **Signal Bandwith:** 125 kHz
 
-Accumulator bit-width: 32 bits
+* **Accumulator bit-width:** 32 bits
 
-Frequency Step Resolution: 5 Hz 
+* **Frequency Step Resolution:** 5 Hz 
 
-Digital Chirp Rate Constant: 859
+* **Digital Chirp Rate Constant:** 859
 
-Target Output Signal: 125kHz Down-Chirp
+* **Target Output Signal:** 125kHz Down-Chirp
 
 ## Software Environment and Requirements
 
