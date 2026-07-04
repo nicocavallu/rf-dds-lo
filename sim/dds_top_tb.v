@@ -12,10 +12,12 @@ module dds_top_tb;
     reg enable;
 
     // Output
-    wire [17:0] sine_out;
+    wire [35:0] signal_out;
+    wire signed [17:0] sim_sine = signal_out[17:0];
+    wire signed [17:0] sim_cosine = signal_out[35:18];
 
     // UUT
-    dds_top uut(.clk(clk), .arst_n(arst_n), .enable(enable), .sine_out(sine_out));
+    dds_top uut(.clk(clk), .arst_n(arst_n), .enable(enable), .signal_out(signal_out));
 
     always begin
         #20 clk = ~clk;
