@@ -3,11 +3,11 @@
 *.out
 a.out
 
-# Waveform Dumps (GTKWave)
+# Waveform Dumps 
 *.vcd
 *.ghw
 
-# Neovim / Vim Swap and Backup Files
+# Neovim Swap and Backup Files
 *.swp
 *.swo
 *~
@@ -15,3 +15,6 @@ a.out
 
 # Tool Specific Logs
 *.log
+
+# Python script Outputs
+.mem
