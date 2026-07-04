@@ -6,6 +6,12 @@ The goal of this project is to create a Direct Digital Synthesizer (DDS) that fu
 ## System
 ![System](dds_lo.png)
 
+This DSP Pipeline Consists of the following hardware blocks:
+1. **Frequency Control Word (FCW) Accumulator:** Increments the FCW of the DDS-LO to dechirp LoRa signal.
+2. **Phase Accumulator:** Increments the MUX of the LUT to iterate through the reference waves.
+3. **Phase Truncation and Dithering:** Truncates the 32-bit `[31:0]` phase accumulator word to match the 10-bit `[9:0]` LUT input and adds dithering to reduce noise caused by truncation.
+4. **Signal LUT:** 10-bit `[9:0]` Look-Up Table that outputs 18-bit `[17:0]` sine wave and its cosine counterpart.
+
 ## Hardware Requirements 
 
 ### FPGA Platform:  
