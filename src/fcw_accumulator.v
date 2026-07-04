@@ -22,7 +22,7 @@ module fcw_accumulator(
     always_comb begin
         case (state)
             RESET: next_state = COUNT;
-            COUNT: next_state = (ms) ? RESET : COUNT;
+            COUNT: next_state = (counter == 15'd24999) ? RESET : COUNT;
             default: next_state = state;
         endcase
     end

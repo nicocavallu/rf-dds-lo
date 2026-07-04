@@ -33,7 +33,7 @@ module dds_top_tb;
         #40;
         arst_n = 1;
 
-        #5000;
+        #500000;
 
         $display("Simulation Complete");
         $finish;

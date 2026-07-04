@@ -1,0 +1,54 @@
+# ULX3S Pin Constraints Configuration (.lpf) for RF-DDS-LO 
+
+# Onboard 25 MHz Oscillator Clock
+LOCATE COMP "clk" SITE "G2";
+IOBUF PORT "clk" PULLMODE=NONE IO_TYPE=LVCMOS33;
+FREQUENCY PORT "clk" 25.00 MHz;
+
+# Asynchronous Acitve Low Reset (arst_n) mapped to button 1
+LOCATE COMP "arst_n" SITE "R1";
+IOBUF PORT "arst_n" PULLMODE=UP IO_TYPE=LVCMOS33;
+
+# Enable Control Pin (enable) mapped to button 2
+LOCATE COMP "enable" SITE "T1";
+IOBUF PORT "enable" PULLMODE=UP IO_TYPE=LVCMOS33;
+
+# Map GPIO Pins to 18 bit output Sine wave
+LOCATE COMP "sine_out[0]"  SITE "B11"; # GP0
+LOCATE COMP "sine_out[1]"  SITE "C11"; # GN0
+LOCATE COMP "sine_out[2]"  SITE "A10"; # GP1
+LOCATE COMP "sine_out[3]"  SITE "A11"; # GN1
+LOCATE COMP "sine_out[4]"  SITE "A9";  # GP2
+LOCATE COMP "sine_out[5]"  SITE "B10"; # GN2
+LOCATE COMP "sine_out[6]"  SITE "B9";  # GP3
+LOCATE COMP "sine_out[7]"  SITE "C10"; # GN3
+LOCATE COMP "sine_out[8]"  SITE "A7";  # GP4
+LOCATE COMP "sine_out[9]"  SITE "A8";  # GN4
+LOCATE COMP "sine_out[10]" SITE "C8";  # GP5
+LOCATE COMP "sine_out[11]" SITE "B8";  # GN5
+LOCATE COMP "sine_out[12]" SITE "A6";  # GP6
+LOCATE COMP "sine_out[13]" SITE "B7";  # GN6
+LOCATE COMP "sine_out[14]" SITE "A4";  # GP7
+LOCATE COMP "sine_out[15]" SITE "A5";  # GN7
+LOCATE COMP "sine_out[16]" SITE "D6";  # GP8
+LOCATE COMP "sine_out[17]" SITE "C7";  # GN8
+
+# Configure output pins to 3.3V CMOS with 4mA drive strength 
+IOBUF PORT "sine_out[0]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[1]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[2]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[3]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[4]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[5]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[6]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[7]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[8]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[9]"  IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[10]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[11]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[12]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[13]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[14]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[15]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[16]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "sine_out[17]" IO_TYPE=LVCMOS33 DRIVE=4;
